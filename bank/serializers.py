@@ -10,7 +10,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 class AccountSerializer(serializers.ModelSerializer):
 
-    user = serializers.SlugRelatedField(slug_field='username', read_only=True)
+    user = serializers.SlugRelatedField(slug_field='password', read_only=True)
     class Meta:
         model = Account
         fields = ('__all__')
